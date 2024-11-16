@@ -11,9 +11,11 @@ const Chat = () => {
     const {user} = useContext(AuthContext);
     const { userChats, isUserChatsLoading, updateCurrentChat} = useContext(ChatContext);
     
+    console.log(userChats?.length);
+    
     return (
         <div id="app-page">
-            {userChats?.length<1 ? null: (
+            {userChats?.length<-1 ? null: (
             <div id="container" className="WEB">
                 <nav id="sidebarNav" className="user-none">
                     <MainTab />

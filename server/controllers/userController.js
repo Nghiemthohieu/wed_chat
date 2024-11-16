@@ -48,6 +48,7 @@ const loginUser = async(req, res) => {
     const {phoneNumber, password} = req.body
 
     try{
+        console.log(phoneNumber);
         let user = await userModel.findOne({phoneNumber});
 
         if(!user) 

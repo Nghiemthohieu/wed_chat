@@ -86,15 +86,11 @@ const ConvListSemiCompact = () => {
                                 >
                                     <div className="ReactVirtualized__Grid__innerScrollContainer" style={{ width: 'auto', height: '608px', maxWidth: '344px', maxHeight: '2146px', overflow: 'auto', position: 'relative' }}>
                                         {isUserChatsLoading && <p>loading chats...</p>}
-                                        {Array.isArray(userChats) && userChats.length > 0 ? (
-                                            userChats.map((chat, index) => (
+                                        {userChats && userChats.map((chat, index) => (
                                                 <div key={index} onClick={() => updateCurrentChat(chat)}>
                                                     <ChatUser chat={chat} user={user} />
                                                 </div>
-                                            ))
-                                        ) : (
-                                            <p>Không có cuộc trò chuyện nào.</p>
-                                        )}
+                                            ))}
                                         {potentialChats && 
                                             potentialChats.map((u, index) => {
                                                 return(

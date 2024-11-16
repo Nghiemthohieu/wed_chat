@@ -1,7 +1,6 @@
 import { createContext, useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";  // Import useNavigate
 import { baseUrl, postRequest } from "../util/services";
-import Login from "../pages/Login";
 
 export const AuthContext = createContext();
 
